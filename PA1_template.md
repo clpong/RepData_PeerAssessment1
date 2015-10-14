@@ -130,7 +130,7 @@ Mean for the total number of steps taken per day:**10766**
 new_activity$dateType <-  ifelse(as.POSIXlt(new_activity$date)$wday %in% c(0,6), 'weekend', 'weekday')
 ```
 
-#### 2. Make a panel plot containing a time series plot (i.e. type = "l" ) of the 5minute interval (xaxis)and the average number of steps taken, averaged across all weekday days or weekend days (yaxis).See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
+##### 2. Make a panel plot containing a time series plot (i.e. type = "l" ) of the 5minute interval (xaxis)and the average number of steps taken, averaged across all weekday days or weekend days (yaxis).See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
 ```r
 new_average_activity <- aggregate(steps ~ interval + dateType, data=new_activity, mean)

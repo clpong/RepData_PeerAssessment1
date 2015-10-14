@@ -318,7 +318,7 @@ new_median &lt;- median(daily_activity)
 <pre><code class="r">new_activity$dateType &lt;-  ifelse(as.POSIXlt(new_activity$date)$wday %in% c(0,6), &#39;weekend&#39;, &#39;weekday&#39;)
 </code></pre>
 
-<h4>2. Make a panel plot containing a time series plot (i.e. type = &ldquo;l&rdquo; ) of the 5minute interval (xaxis)and the average number of steps taken, averaged across all weekday days or weekend days (yaxis).See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.</h4>
+<h5>2. Make a panel plot containing a time series plot (i.e. type = &ldquo;l&rdquo; ) of the 5minute interval (xaxis)and the average number of steps taken, averaged across all weekday days or weekend days (yaxis).See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.</h5>
 
 <pre><code class="r">new_average_activity &lt;- aggregate(steps ~ interval + dateType, data=new_activity, mean)
 ggplot(new_average_activity, aes(interval, steps),color=&quot;green&quot;) + 
